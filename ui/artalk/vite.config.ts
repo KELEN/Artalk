@@ -55,6 +55,15 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/artalk-api': {
+        target: 'http://localhost:23366',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/artalk-api/, ''),
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
