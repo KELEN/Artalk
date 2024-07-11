@@ -48,21 +48,21 @@ export default defineConfig({
       },
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/style/_variables.scss";@import "./src/style/_extend.scss";`,
-      },
-    },
-  },
   server: {
     proxy: {
       '/artalk-api': {
         target: 'http://localhost:23366',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/artalk-api/, ''),
-      }
+      },
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/style/_variables.scss";@import "./src/style/_extend.scss";`,
+      },
+    },
   },
   resolve: {
     alias: {

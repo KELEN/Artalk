@@ -9,12 +9,16 @@ export default function renderReplyAt(r: Render) {
   if (!r.opts.replyTo) return // if no replyTo data
 
   r.$replyAt = Utils.createElement(
-    `<span class="atk-item atk-reply-at"><span class="atk-arrow"></span><span class="atk-nick"></span></span>`,
+    `<span class="atk-item atk-reply-at"><span class="atk-nick"></span></span>`,
   )
-  r.$replyAt.querySelector<HTMLElement>('.atk-nick')!.innerText = `${r.opts.replyTo.nick}`
+
+  r.$replyAt.querySelector<HTMLElement>('.atk-nick')!.innerText = `@${r.opts.replyTo.nick}`
   r.$replyAt.onclick = () => {
     r.comment.getActions().goToReplyComment()
   }
 
-  r.$headerBadgeWrap.insertAdjacentElement('afterend', r.$replyAt)
+  // 在 $content 前插入
+  (r.$content?.firstChild as HTMLElement)!.insertAdjacentElement('afterbegin', r.$replyAt)
+
+  // r.$content.insertAdjacentElement('afterend', r.$replyAt)
 }

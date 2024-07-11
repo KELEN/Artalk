@@ -126,3 +126,30 @@ Your contributions enrich the open-source community, fostering learning, inspira
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FArtalkJS%2FArtalk.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FArtalkJS%2FArtalk?ref=badge_shield)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FArtalkJS%2FArtalk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FArtalkJS%2FArtalk?ref=badge_large)
+
+
+
+  artalk:
+    container_name: artalk
+    image: artalk/artalk-go
+    restart: unless-stopped
+    ports:
+      - 23366:23366
+    volumes:
+      - ./artalk-data:/data
+    environment:
+      - TZ=Asia/Shanghai
+      - ATK_LOCALE=zh-CN
+      - ATK_SITE_DEFAULT=Kelen的博客
+      - ATK_TRUSTED_DOMAINS=https://artalk.kelen.cc
+      - ATK_CAPTCHA_ACTION_LIMIT=10
+      - ATK_CAPTCHA_CAPTCHA_TYPE=geetest
+      - ATK_CAPTCHA_GEETEST_CAPTCHA_ID=253914ebbd25c573ca56039784755bb6
+      - ATK_CAPTCHA_GEETEST_CAPTCHA_KEY=f35995adc2d7a6e0dab5405e2efe9dbd
+      - ATK_EMAIL_ENABLED=true
+      - ATK_EMAIL_SEND_ADDR=340443366@qq.com
+      - ATK_EMAIL_SEND_NAME=kelen.cc
+      - ATK_EMAIL_SMTP_PASSWORD=
+      - ATK_EMAIL_SMTP_USERNAME=kelen.cc
+      - ATK_IMG_UPLOAD_ENABLED=false # 关闭图片上传
+      - ATK_IP_REGION_ENABLED=true # 显示ip归属地

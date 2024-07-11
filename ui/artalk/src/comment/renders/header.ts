@@ -2,6 +2,7 @@ import * as Utils from '../../lib/utils'
 import type Render from '../render'
 import $t from '@/i18n'
 
+
 /**
  * 评论头部界面
  */
@@ -19,16 +20,7 @@ export default function renderHeader(r: Render) {
 function renderNick(r: Render) {
   r.$headerNick = r.$el.querySelector<HTMLElement>('.atk-nick')!
 
-  if (r.data.link) {
-    const $nickA = Utils.createElement<HTMLLinkElement>(
-      '<a target="_blank" rel="noreferrer noopener nofollow"></a>',
-    )
-    $nickA.innerText = r.data.nick
-    $nickA.href = Utils.isValidURL(r.data.link) ? r.data.link : `https://${r.data.link}`
-    r.$headerNick.append($nickA)
-  } else {
-    r.$headerNick.innerText = r.data.nick
-  }
+  r.$headerNick.innerText = r.data.nick
 }
 
 function renderVerifyBadge(ctx: Render) {

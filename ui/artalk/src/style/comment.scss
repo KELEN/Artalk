@@ -87,29 +87,8 @@
         &.atk-nick,
         &.atk-nick a {
           font-size: 14px;
-          color: var(--at-color-main);
+          font-weight: bolder;
           text-decoration: none;
-        }
-
-        &.atk-reply-at {
-          margin-left: 2px;
-
-          & > .atk-arrow:before {
-            content: '';
-            vertical-align: middle;
-            transform: rotate(90deg);
-            border-bottom: 4px solid var(--at-color-grey);
-            border-left: 3px solid transparent;
-            border-right: 3px solid transparent;
-            display: inline-block;
-            margin-top: -1px;
-          }
-
-          & > .atk-nick {
-            color: var(--at-color-main);
-            cursor: pointer;
-            margin-left: 6px;
-          }
         }
       }
 
@@ -177,6 +156,7 @@
 
       & > .atk-content {
         word-break: break-word;
+        font-size: 14px;
 
         &.atk-type-collapsed {
           border: 3px solid var(--at-color-bg-grey);
@@ -327,7 +307,6 @@
 
   // 限高可滚动
   .atk-height-limit-scroll {
-    // @extend .atk-slim-scrollbar;
     margin-top: 10px;
     overflow-y: auto;
     $cBorder: var(--at-color-border);
@@ -362,6 +341,28 @@
 
     & > .atk-comment {
       padding: 0;
+
+      .atk-reply-at {
+        margin-left: 2px;
+        font-size: 14px;
+
+        & > .atk-arrow:before {
+          content: '';
+          vertical-align: middle;
+          transform: rotate(90deg);
+          border-bottom: 4px solid var(--at-color-grey);
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          display: inline-block;
+          margin-top: -1px;
+        }
+
+        & > .atk-nick {
+          color: var(--at-color-main);
+          cursor: pointer;
+          margin-right: 6px;
+        }
+      }
 
       & > .atk-avatar img {
         width: 36px;
