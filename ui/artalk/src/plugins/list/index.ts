@@ -22,7 +22,7 @@ const ListPlugins: ArtalkPlugin[] = [
   Unread,
   WithEditor,
   Count,
-  SidebarBtn,
+  // SidebarBtn,
   UnreadBadge,
   Dropdown,
   GotoDispatcher,

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <title>Artalk DEMO</title>
@@ -191,8 +191,13 @@
         pageKey: 'https://artalk.js.org/guide/intro.html',
         pageTitle: 'Artalk Home',
         server: '/artalk-api/',
+        // server: 'https://artalk.kelen.cc/',
         site: 'Kelen的博客',
-        //useBackendConf: true,
+        avatarURLBuilder: (comment) => {
+          return `https://avatar.iran.liara.run/public/boy?username=${comment.user}`
+        },
+        useBackendConf: false,
+        emoticons: 'https://static.kelen.cc/artalk-emoticons.json',
       })
 
       window.artalk = artalk

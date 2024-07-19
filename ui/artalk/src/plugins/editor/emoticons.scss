@@ -20,6 +20,10 @@
         width: 63px;
       }
 
+      &[data-type='emoji'] > .atk-item {
+        font-size: 24px;
+      }
+
       & > .atk-item {
         display: flex;
         align-items: center;

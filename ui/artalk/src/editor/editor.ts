@@ -31,7 +31,7 @@ class Editor extends Component implements EditorApi {
   }
 
   getHeaderInputEls() {
-    return { nick: this.ui.$nick, email: this.ui.$email, link: this.ui.$link }
+    return { nick: this.ui.$nick, email: this.ui.$email }
   }
 
   getContentFinal() {
@@ -105,7 +105,7 @@ class Editor extends Component implements EditorApi {
   }
 
   showNotify(msg: string, type: any) {
-    Ui.showNotify(this.ui.$notifyWrap, msg, type)
+    // Ui.showNotify(this.ui.$notifyWrap, msg, type)
   }
 
   showLoading() {

@@ -93,7 +93,7 @@ export default class HeaderUser extends EditorPlug {
 
     // Auto fill user link from server
     if (data.user && data.user.link) {
-      this.kit.useUI().$link.value = data.user.link
+      // this.kit.useUI().$link.value = data.user.link
       this.kit.useUser().update({ link: data.user.link })
     }
   }

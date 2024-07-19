@@ -26,14 +26,16 @@
       width: 100%;
       font-size: 14px;
       background: transparent;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       border-radius: calc($block-radius / 2);
       padding: 6px 5px;
       resize: none;
       outline: none;
 
+      border-bottom: 1px solid var(--at-color-border);
+
       &:not(:last-child) {
-        margin-right: 2px;
+        margin-right: 12px;
       }
     }
   }

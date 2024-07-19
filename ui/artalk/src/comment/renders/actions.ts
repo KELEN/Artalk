@@ -11,11 +11,11 @@ export default function renderActions(r: Render) {
     renderVote,
     renderReply,
     // 管理员操作
-    renderCollapse,
-    renderModerator,
-    renderPin,
-    renderEdit,
-    renderDel,
+    // renderCollapse,
+    // renderModerator,
+    // renderPin,
+    // renderEdit,
+    // renderDel,
   }).forEach(([name, render]) => {
     render(r)
   })

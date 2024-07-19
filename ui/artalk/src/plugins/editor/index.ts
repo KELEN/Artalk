@@ -21,7 +21,7 @@ const EDITOR_PLUGS: (typeof EditorPlug)[] = [
   LocalStorage,
   HeaderEvent,
   HeaderUser,
-  HeaderLink,
+  // HeaderLink,
   Textarea,
   Submit,
   SubmitBtn,

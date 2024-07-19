@@ -71,7 +71,7 @@ export default class StateEdit extends EditorPlug {
 
     ui.$nick.value = comment.nick || ''
     ui.$email.value = comment.email || ''
-    ui.$link.value = comment.link || ''
+    // ui.$link.value = comment.link || ''
 
     this.kit.useEditor().setContent(comment.content)
     ui.$textarea.focus()
@@ -94,7 +94,7 @@ export default class StateEdit extends EditorPlug {
     const { nick, email, link } = this.kit.useUser().getData()
     ui.$nick.value = nick
     ui.$email.value = email
-    ui.$link.value = link
+    // ui.$link.value = link
 
     this.kit.useEditor().setContent('')
     this.restoreSubmitBtnText()

@@ -52,7 +52,7 @@ __debug*
 
 # frontend
 node_modules
-/ui/**/dist
+# /ui/**/dist
 
 # backend
 /artalk.yml

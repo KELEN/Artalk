@@ -23,6 +23,7 @@ export default defineConfig({
     target: 'es2015',
     outDir: resolve(__dirname, 'dist'),
     minify: 'terser',
+    // minify: false,
     sourcemap: true,
     emptyOutDir: name === 'Artalk', // wait for https://github.com/qmhc/vite-plugin-dts/pull/291
     lib: {

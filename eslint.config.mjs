@@ -80,7 +80,7 @@ export default eslintTs.config(
       },
     },
     plugins: {
-      '@typescript-eslint': pluginTS,
+      // '@typescript-eslint': pluginTS,
       'import-x': pluginImportX,
     },
     rules: {

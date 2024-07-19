@@ -157,6 +157,7 @@
       & > .atk-content {
         word-break: break-word;
         font-size: 14px;
+        color: var(--font-color-400, --at-color-font);
 
         &.atk-type-collapsed {
           border: 3px solid var(--at-color-bg-grey);
